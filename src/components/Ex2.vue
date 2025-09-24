@@ -2,8 +2,8 @@
     export default { 
         data() {
             return {
-                width: '200',
-                height: '200',
+                width: '400',
+                height: '400',
                 myImg: '/assets/me.png'
             }
         },
@@ -13,5 +13,6 @@
 <template>
 
     <!-- add code here -->
+    <img v-bind:src="myImg" alt="" v-bind:width="width" v-bind:height="height">
    
 </template>
