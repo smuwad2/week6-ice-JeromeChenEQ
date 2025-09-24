@@ -35,7 +35,7 @@
             div ID : {{id}} 
         </div>
         
-        <button type="button" v-on:click="changeColor()">Change Color</button>
+        <button type="button" v-on:click="changeColor()" v-bind:class="{'btn btn-primary': buttonStatus, 'btn btn-danger': !buttonStatus}">Change Color</button>
     </div>
 
 </template>
