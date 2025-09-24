@@ -13,6 +13,7 @@
 <template>
 
     <!-- add code here -->
-    <img v-bind:src="myImg" alt="" v-bind:width="width" v-bind:height="height">
+    <!-- v-bind: ...... same as v: ..... -->
+    <img v-bind:src="myImg" alt="" v:width="width" v-bind:height="height">
    
 </template>
