@@ -24,7 +24,7 @@
         which lets the user to select either to login with username or email -->
     <select v-model="loginType">
         <option selected value="username">Username login</option>
-        <option>Email login</option>
+        <option value="emailLogin">Email login</option>
     </select>
     
     <div v-if="loginType === 'username'">
@@ -32,7 +32,7 @@
         <input placeholder="Enter your username">
     </div>
 
-    <div v-else>
+    <div v-else-if="loginType === 'emailLogin'">
         <label>Email</label>
         <input placeholder="Enter your email address">
     </div>
