@@ -2,6 +2,16 @@
     export default { 
         // Add Code Here
         // challenge: use array  
+        data() {
+            return {
+                message: "Choose your favourite fruit:", 
+                fruit1: "apple", 
+                fruit2: "orange", 
+                fruit3: "peach", 
+                fruits: ["apple", "orange", "peach"]
+            }
+        }
+        
     }
 </script>
 
@@ -11,6 +21,12 @@
         {{ fruit1 }} <input type="radio" name="fruit">
         {{ fruit2 }} <input type="radio" name="fruit">
         {{ fruit3 }} <input type="radio" name="fruit">
+
+        <h3>whack</h3>
+        {{ message }} <br>
+        <span v-for="fruit in fruits">
+            {{ fruit }} <input type="radio">
+        </span>            
     </div>
 </template>
 
