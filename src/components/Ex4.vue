@@ -3,39 +3,31 @@
         data() {
             return {
                 // Add code here
-                id: "blueBox",
-                buttonStatus: true,
-                class1: "m-2",
-                class2: "",
-
-
+                id:"demo1",
+                blueBoth: true
             }
         },
         methods: { 
-   			// Add code here
-            changeColor() {
-                if (this.buttonStatus == true) {
-                    this.buttonStatus = false;
-                    this.id = "redBox"
-                }
-                else {
-                    this.buttonStatus = true;
-                    this.id = "blueBox"
-                }
-		    }
-        }
+         // Add code here
+            changeColour(){
+                this.blueBoth = !this.blueBoth
+            }
+            }
     }
+
 </script>
 
 <template>
     
     <!-- Modify code here -->
     <div class="container">
-        <div v-bind:id="id" class="m-2" v-bind:class="{'blueBox': buttonStatus, 'redBox': !buttonStatus}">
+        <div v-bind:id="id" class="m-2" v-bind:class="{'blueBox':blueBoth, 'redBox':!blueBoth}">
             div ID : {{id}} 
         </div>
         
-        <button type="button" v-on:click="changeColor()" v-bind:class="{'btn btn-primary': buttonStatus, 'btn btn-danger': !buttonStatus}">Change Color</button>
+        <button type="button"  @click='changeColour()' v-bind:class="
+        {'btn btn-primary':blueBoth, 'btn btn-danger':!blueBoth}">
+        Change Color</button>
     </div>
 
 </template>
